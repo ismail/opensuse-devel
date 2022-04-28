@@ -6,7 +6,7 @@ RUN zypper --non-interactive refresh
 RUN zypper --non-interactive install --no-confirm --no-recommends \
             7zip bsdtar ca-certificates clang13 cpio curl elfutils gcc12 gcc12-c++ gdb go1.18 \
             less libc++-devel llvm13 openssl-3 pkgdiff python310 openssh-clients procps \
-            ruby3.1-rubygem-pry shadow strace sudo vim zsh zstd
+            ruby3.1-rubygem-pry shadow strace sudo vim zsh zstd && zypper clean
 
 ARG GOSU_VERSION=1.14
 ARG TARGETPLATFORM
