@@ -5,7 +5,7 @@ FROM opensuse/tumbleweed
 RUN zypper --non-interactive refresh && zypper --non-interactive dup
 RUN zypper --non-interactive install --no-confirm --no-recommends \
             7zip bsdtar ca-certificates clang14 cpio curl elfutils gcc12 gcc12-c++ gdb go1.18 \
-            less libc++-devel llvm14 openssl-3 pkgdiff python310 openssh-clients procps \
+            iproute2 less libc++-devel llvm14 openssl-3 pkgdiff python310 openssh-clients procps \
             ruby3.1-rubygem-pry shadow strace sudo vim zsh zstd && zypper clean
 
 ARG GOSU_VERSION=1.14
