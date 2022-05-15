@@ -2,8 +2,7 @@
 
 FROM opensuse/tumbleweed
 
-RUN zypper --non-interactive refresh && zypper --non-interactive dup && \
-    zypper --non-interactive remove busybox
+RUN zypper --non-interactive refresh && zypper --non-interactive dup
 RUN zypper --non-interactive install --no-confirm --no-recommends \
             7zip bmon bsdtar ca-certificates clang14 cpio curl elfutils \
             gcc12 gcc12-c++ gdb git go1.18 iproute2 less libc++-devel \
